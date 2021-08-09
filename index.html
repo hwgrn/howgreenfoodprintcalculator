@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>탄소발자국 계산기: 음식편</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <right><img src="logo.jpg" alt="what image shows" height="120" width="350"></right>
+
+    <h1>당신의 탄소발자국은?</h1>
+    <style>
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        color: green;
+      }
+      </style>
+      <h3>우리가 밥을 먹을때마다 탄소가 배출된다는 사실, 아시나요? 오늘 먹은 음식의 탄소 배출량을 확인해보세요!
+        <br>
+        당신이 먹은 음식 옆에 인분수를 적어주시고 맨 밑에 "결과보기" 버튼을 눌러주세요!
+        <br>
+        베이커리, 과자류, 과일, 그리고 음료 카테고리는 갯수로 계산해주세요.</h3>
+      <style>
+      h3 {
+        font-size: 25px;
+        text-align: center;
+        color: black;
+      }
+      </style>
+  </head>
+
+  <body>
+    <form name="formcalc">
+      <style>
+          #grid{
+            display: grid;
+            grid-template-columns: 150px;
+          }
+          .index {
+            width:50%;
+            float: center;
+            margin: 0 3% 48px 0;
+          }
+
+            .index:nth-child(9n) {
+               margin-right: 0;
+             }
+      </style>
+
+
+      <body>
+        <div id="grid">
+          </body>
+
+          <div class="container"> <h2>밥, 죽, 면</h2>
+            <style>
+            h2 {
+              font-size: 20px;
+              text-align: center;
+            }
+            </style>
+            <p>
+      쌀밥: <input type="text" name="txtnum1">
+      <br>
+      비빔밥: <input type="text" name="txtnum2">
+      <br>
+      김밥: <input type="text" name="txtnum3">
+      <br>
+      김치볶음밥: <input type="text" name="txtnum4">
+      <br>
+      칼국수: <input type="text" name="txtnum5">
+      <br>
+      물냉면: <input type="text" name="txtnum6">
+      <br>
+      비빔냉면: <input type="text" name="txtnum7">
+      <br>
+      </p>
+       <h2>국, 탕, 찌개</h2>
+        <style>
+        h2 {
+          font-size: 20px;
+          text-align: center;
+        }
+        </style>
+        <p>
+      된장찌개: <input type="text" name="txtnum8">
+      <br>
+      김치찌개: <input type="text" name="txtnum9">
+      <br>
+      미역국: <input type="text" name="txtnum10">
+      <br>
+      콩나물국: <input type="text" name="txtnum11">
+      <br>
+      설렁탕: <input type="text" name="txtnum12">
+      <br>
+      갈비탕: <input type="text" name="txtnum13">
+      <br>
+      육개장: <input type="text" name="txtnum14">
+      <br>
+      순두부찌개: <input type="text" name="txtnum15">
+      <br>
+    </p>
+     <div class="container"> <h2>반찬, 전</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      배추김치: <input type="text" name="txtnum16">
+      <br>
+      콩나물: <input type="text" name="txtnum17">
+      <br>
+      깍두기: <input type="text" name="txtnum18">
+      <br>
+      시금치나물: <input type="text" name="txtnum19">
+      <br>
+      장조림: <input type="text" name="txtnum20">
+      <br>
+      멸치조림: <input type="text" name="txtnum21">
+      <br>
+      콩조림: <input type="text" name="txtnum22">
+      <br>
+      제육볶음: <input type="text" name="txtnum23">
+      <br>
+      불고기: <input type="text" name="txtnum24">
+      <br>
+      고등어 구이: <input type="text" name="txtnum25">
+      <br>
+      삼겹살 구이: <input type="text" name="txtnum26">
+      <br>
+      소고기 구이: <input type="text" name="txtnum27">
+      <br>
+      달걀프라이: <input type="text" name="txtnum28">
+      <br>
+      잡채: <input type="text" name="txtnum29">
+      <br>
+      계란찜: <input type="text" name="txtnum30">
+      <br>
+    </p>
+     <div class="container"> <h2>유제품</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      우유: <input type="text" name="txtnum31">
+      <br>
+      두유: <input type="text" name="txtnum32">
+      <br>
+      치즈: <input type="text" name="txtnum33">
+      <br>
+      요거트: <input type="text" name="txtnum34">
+      <br>
+    </p>
+     <div class="container"> <h2>외국 음식</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      피자: <input type="text" name="txtnum35">
+      <br>
+      햄버거 세트: <input type="text" name="txtnum36">
+      <br>
+      후라이드 치킨: <input type="text" name="txtnum37">
+      <br>
+      카레: <input type="text" name="txtnum38">
+      <br>
+      볼로네제 파스타: <input type="text" name="txtnum39">
+      <br>
+    </p>
+   <div class="container"> <h2>베이커리</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      베이글: <input type="text" name="txtnum40">
+      <br>
+      식빵: <input type="text" name="txtnum41">
+      <br>
+      케이크: <input type="text" name="txtnum42">
+      <br>
+      도넛: <input type="text" name="txtnum43">
+      <br>
+      머핀: <input type="text" name="txtnum44">
+      <br>
+      팬케이크: <input type="text" name="txtnum45">
+      <br>
+      스콘: <input type="text" name="txtnum46">
+      <br>
+      와플: <input type="text" name="txtnum47">
+      <br>
+    </p>
+    <div class="container">  <h2>과자류</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      크래커: <input type="text" name="txtnum48">
+      <br>
+      감자칩: <input type="text" name="txtnum49">
+      <br>
+      초콜렛: <input type="text" name="txtnum50">
+      <br>
+      마시멜로: <input type="text" name="txtnum51">
+      <br>
+      사탕: <input type="text" name="txtnum52">
+      <br>
+    </p>
+     <div class="container"> <h2>과일</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      사과: <input type="text" name="txtnum53">
+      <br>
+      아보카도: <input type="text" name="txtnum54">
+      <br>
+      바나나: <input type="text" name="txtnum55">
+      <br>
+      딸기: <input type="text" name="txtnum56">
+      <br>
+      포도: <input type="text" name="txtnum57">
+      <br>
+      오렌지: <input type="text" name="txtnum58">
+      <br>
+      복숭아: <input type="text" name="txtnum59">
+      <br>
+      배: <input type="text" name="txtnum60">
+      <br>
+      수박: <input type="text" name="txtnum61">
+      <br>
+    </p>
+  <div class="container"> <h2>야채</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      브로콜리: <input type="text" name="txtnum62">
+      <br>
+      토마토: <input type="text" name="txtnum63">
+      <br>
+      양파: <input type="text" name="txtnum64">
+      <br>
+      버섯: <input type="text" name="txtnum65">
+      <br>
+      마늘: <input type="text" name="txtnum66">
+      <br>
+      고추: <input type="text" name="txtnum67">
+      <br>
+      당근: <input type="text" name="txtnum68">
+      <br>
+      양배추(80g): <input type="text" name="txtnum69">
+      <br>
+      배추(80g): <input type="text" name="txtnum70">
+      <br>
+      오이: <input type="text" name="txtnum71">
+      <br>
+    </p>
+    <div class="container"> <h2>고기류</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      베이컨(1슬라이스,33g): <input type="text" name="txtnum72">
+      <br>
+      소고기(65g): <input type="text" name="txtnum73">
+      <br>
+      닭고기(160g): <input type="text" name="txtnum74">
+      <br>
+      소세지(11g): <input type="text" name="txtnum75">
+      <br>
+      햄(1슬라이스,15g): <input type="text" name="txtnum76">
+      <br>
+      돼지고기(85g): <input type="text" name="txtnum77">
+      <br>
+       오리고기(160g): <input type="text" name="txtnum78">
+      <br>
+    </p>
+    <div class="container"> <h2>음료</h2>
+      <style>
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+      </style>
+      <p>
+      에스프레소(1샷,30ml): <input type="text" name="txtnum79">
+      <br>
+      라떼(240ml): <input type="text" name="txtnum80">
+      <br>
+      인스턴트 커피(400ml): <input type="text" name="txtnum81">
+      <br>
+      과일쥬스(150ml): <input type="text" name="txtnum82">
+      <br>
+      물(500ml): <input type="text" name="txtnum83">
+      <br>
+      사이다(500ml): <input type="text" name="txtnum84">
+      <br>
+      소주(25ml): <input type="text" name="txtnum85">
+      <br>
+      와인(150ml): <input type="text" name="txtnum86">
+      <br>
+    </p>
+    <h2>탄소배출량 (gCO2e)</h2>
+
+<p>
+       <input type="text" name="txtres"><br>
+      </p>
+
+      <input type="button" value="결과보기" onClick="sumValues()">
+
+      </form>
+
+      <script type="text/javascript">
+
+            function sumValues()
+            {
+            var num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14, num15, num16, num17, num18, num19, num20, num21, num22, num23, num24, num25, num26, num27, num28, num29, num30, num31, num32, num33, num34, num35, num36, num37, num38, num39, num40, num41, num42, num43, num44, num45, num46, num47, num48, num49, num50, num51, num52, num53, num54, num55, num56, num57, num58, num59, num60, num61, num62, num63, num64, num65, num66, num67, num68, num69, num70, num71, num72, num73, num74, num75, num76, num77, num78, num79, num80, num81, num82, num83, num84, num85, num86, res;
+              num1=Number(document.formcalc.txtnum1.value);
+              num2=Number(document.formcalc.txtnum2.value);
+              num3=Number(document.formcalc.txtnum3.value);
+              num4=Number(document.formcalc.txtnum4.value);
+              num5=Number(document.formcalc.txtnum5.value);
+              num6=Number(document.formcalc.txtnum6.value);
+              num7=Number(document.formcalc.txtnum7.value);
+              num8=Number(document.formcalc.txtnum8.value);
+              num9=Number(document.formcalc.txtnum9.value);
+              num10=Number(document.formcalc.txtnum10.value);
+              num11=Number(document.formcalc.txtnum11.value);
+              num12=Number(document.formcalc.txtnum12.value);
+              num13=Number(document.formcalc.txtnum13.value);
+              num14=Number(document.formcalc.txtnum14.value);
+              num15=Number(document.formcalc.txtnum15.value);
+              num16=Number(document.formcalc.txtnum16.value);
+              num17=Number(document.formcalc.txtnum17.value);
+              num18=Number(document.formcalc.txtnum18.value);
+              num19=Number(document.formcalc.txtnum19.value);
+              num20=Number(document.formcalc.txtnum20.value);
+              num21=Number(document.formcalc.txtnum21.value);
+              num22=Number(document.formcalc.txtnum22.value);
+              num23=Number(document.formcalc.txtnum23.value);
+              num24=Number(document.formcalc.txtnum24.value);
+              num25=Number(document.formcalc.txtnum25.value);
+              num26=Number(document.formcalc.txtnum26.value);
+              num27=Number(document.formcalc.txtnum27.value);
+              num28=Number(document.formcalc.txtnum28.value);
+              num29=Number(document.formcalc.txtnum29.value);
+              num30=Number(document.formcalc.txtnum30.value);
+              num31=Number(document.formcalc.txtnum31.value);
+              num32=Number(document.formcalc.txtnum32.value);
+              num33=Number(document.formcalc.txtnum33.value);
+              num34=Number(document.formcalc.txtnum34.value);
+              num35=Number(document.formcalc.txtnum35.value);
+              num36=Number(document.formcalc.txtnum36.value);
+              num37=Number(document.formcalc.txtnum37.value);
+              num38=Number(document.formcalc.txtnum38.value);
+              num39=Number(document.formcalc.txtnum39.value);
+              num40=Number(document.formcalc.txtnum40.value);
+              num41=Number(document.formcalc.txtnum41.value);
+              num42=Number(document.formcalc.txtnum42.value);
+              num43=Number(document.formcalc.txtnum43.value);
+              num44=Number(document.formcalc.txtnum44.value);
+              num45=Number(document.formcalc.txtnum45.value);
+              num46=Number(document.formcalc.txtnum46.value);
+              num47=Number(document.formcalc.txtnum47.value);
+              num48=Number(document.formcalc.txtnum48.value);
+              num49=Number(document.formcalc.txtnum49.value);
+              num50=Number(document.formcalc.txtnum50.value);
+              num51=Number(document.formcalc.txtnum51.value);
+              num52=Number(document.formcalc.txtnum52.value);
+              num53=Number(document.formcalc.txtnum53.value);
+              num54=Number(document.formcalc.txtnum54.value);
+              num55=Number(document.formcalc.txtnum55.value);
+              num56=Number(document.formcalc.txtnum56.value);
+              num57=Number(document.formcalc.txtnum57.value);
+              num58=Number(document.formcalc.txtnum58.value);
+              num59=Number(document.formcalc.txtnum59.value);
+              num60=Number(document.formcalc.txtnum60.value);
+              num61=Number(document.formcalc.txtnum61.value);
+              num62=Number(document.formcalc.txtnum62.value);
+              num63=Number(document.formcalc.txtnum63.value);
+              num64=Number(document.formcalc.txtnum64.value);
+              num65=Number(document.formcalc.txtnum65.value);
+              num66=Number(document.formcalc.txtnum66.value);
+              num67=Number(document.formcalc.txtnum67.value);
+              num68=Number(document.formcalc.txtnum68.value);
+              num69=Number(document.formcalc.txtnum69.value);
+              num70=Number(document.formcalc.txtnum70.value);
+              num71=Number(document.formcalc.txtnum71.value);
+              num72=Number(document.formcalc.txtnum72.value);
+              num73=Number(document.formcalc.txtnum73.value);
+              num74=Number(document.formcalc.txtnum74.value);
+              num75=Number(document.formcalc.txtnum75.value);
+              num76=Number(document.formcalc.txtnum76.value);
+              num77=Number(document.formcalc.txtnum77.value);
+              num78=Number(document.formcalc.txtnum78.value);
+              num79=Number(document.formcalc.txtnum79.value);
+              num80=Number(document.formcalc.txtnum80.value);
+              num81=Number(document.formcalc.txtnum81.value);
+              num82=Number(document.formcalc.txtnum82.value);
+              num83=Number(document.formcalc.txtnum83.value);
+              num84=Number(document.formcalc.txtnum84.value);
+              num85=Number(document.formcalc.txtnum85.value);
+              num86=Number(document.formcalc.txtnum86.value);
+              res=num1*500+num2*700+num3*400+num4*400+num5*400+num6*2400+num7*1100+num8*1500+num9*2300+num10*2600+num11*500+num12*1000+num13*5000+num14*3000+num15*700+num16*300+num17*200+num18*300+num19*500+num20*5500+num21*100+num22*700+num23*1900+num24*13900+num25*300+num26*2000+num27*7700+num28*100+num29*600+num30*200+num31*1200+num32*300+num33*11300+num34*264+num35*2000+num36*3700+num37*2100+num38*2900+num39*4200+num40*100+num41*97+num42*300+num43*658+num44*658+num45*50+num46*129+num47*053+num48*28+num49*306+num50*173+num51*68+num52*72+num53*72+num54*384+num55*104+num56*100+num57*345+num58*152+num59*152+num60*82+num61*100+num62*21+num63*100+num64*84+num65*112+num66*1+num67*30+num68*91+num69*50+num70*129+num71*1+num72*219+num73*2816+num74*753+num75*73+num76*99+num77*563+num78*809+num79*21+num80*387+num81*645+num82*300+num83*0+num84*438+num85*58+num86*205;
+              document.formcalc.txtres.value=res;
+            }
+            </script>
+  </body>
+</html>

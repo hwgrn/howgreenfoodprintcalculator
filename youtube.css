@@ -1,0 +1,16 @@
+body {
+  line-height: 1.5;
+}
+
+.container {
+  width: 75%
+  margin: 0 auto;
+  column-count: 11;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
